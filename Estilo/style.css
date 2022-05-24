@@ -185,10 +185,10 @@
     justify-self: end;
     align-self: center;
     background-color: white;
-    border-top: 2px solid var(--cordestaque);
-    border-left: 2px solid var(--cordestaque);
-    border-bottom: 4px solid var(--cordestaque);
-    border-right: 4px solid var(--cordestaque);
+    border-top: 1px solid var(--cordestaque);
+    border-left: 1px solid var(--cordestaque);
+    border-bottom: 3px solid var(--cordestaque);
+    border-right: 3px solid var(--cordestaque);
 }
 
 #cliente01 {
@@ -226,6 +226,10 @@
     margin: 0 auto;
     border-radius: 10px 10px;
     padding: 25px 0;
+    border-top: 1px solid var(--cordestaque);
+    border-left: 1px solid var(--cordestaque);
+    border-bottom: 3px solid var(--cordestaque);
+    border-right: 3px solid var(--cordestaque);
 }
 
 .contato > .container > h2, p, img {

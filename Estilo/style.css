@@ -213,14 +213,14 @@
     justify-self: center;
 }
 
-.contato {
+#contato {
     background-color: var(--bgpreto);
     height: 70vh;
     padding-top: 100px;
     text-align: center;
 }
 
-.contato > .container {
+#contato > .container {
     background-color: white;
     width: 450px;
     margin: 0 auto;
@@ -232,7 +232,7 @@
     border-right: 3px solid var(--cordestaque);
 }
 
-.contato > .container > h2, p, img {
+#contato > .container > h2, p, img {
     margin-bottom: 20px;
 }
 
@@ -241,7 +241,7 @@
     margin: 0 auto;
 }
 
-.contato > .container > form >input {
+#contato > .container > form >input {
     border: 1px solid black;
     padding: 15px;
     margin-bottom: 20px;

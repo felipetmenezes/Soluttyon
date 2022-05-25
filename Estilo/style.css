@@ -10,7 +10,7 @@
 }
 
 :root {
-    --cordestaque: rgb(235, 200, 0);
+    --cordestaque: #af9502;
     --cordestaque2:  rgb(52, 52, 52);
     --fontepadrao: Arial, Helvetica;
     --bgpreto: rgba(0, 0, 0, 0.975)
@@ -46,10 +46,15 @@ h2,h3 {
     transition: .2s linear;
 }
 
+.merchan-service {
+    background-image:linear-gradient(to top, #141313 15%, #2a2a2a 60%,  #191919) ;
+    text-align: center;
+}
+
 .merchan {
     height: 70vh;
-    background-image:linear-gradient(to bottom, rgb(52, 52, 52), var(--bgpreto), black) ;
     text-align: center;
+    background-image:linear-gradient(to bottom, #343434, var(--bgpreto), black) ;
 }
 
 .merchan-box > h2 {
@@ -105,20 +110,19 @@ h2,h3 {
 }
 
 .service-section {
-    background-color: var(--bgpreto);
     padding-bottom: 50px;
 }
 
 .service-section > h2 {
-    color: white;
-    text-align: left;
-    padding-bottom: 30px;
+    color: var(--cordestaque);
+    text-align: center;
+    padding: 50px 0;
     margin-left: auto;
     margin-right: auto;
     width: 60%;
-    text-shadow: 0px 1px 2px var(--cordestaque);
-    font-size: 60px;
-    font-weight: 300;
+    text-shadow: 0px 1px 2px var(--bgpreto);
+    font-size: 48px;
+    font-weight: bold;
 }
 
 .service-section > .container {
@@ -160,6 +164,11 @@ h2,h3 {
 .subtitle {
     color: var(--bgpreto);
     text-shadow: 0px 0px 1px var(--cordestaque);
+}
+
+.subtitle2 {
+    color: #151414;
+    text-shadow: 0px 0px 1px var(--bgpreto);
 }
 
 .container-feedback {

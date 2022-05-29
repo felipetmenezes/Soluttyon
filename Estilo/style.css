@@ -61,13 +61,15 @@ h2,h3 {
 /* PRIMEIRO MERCHAN !*/
 
 .merchan {
-    text-align: center;
     background-image:linear-gradient(to bottom, #343434, var(--bgpreto), black) ;
     padding: 20px 0;
 }
 .merchan-box {
+    display: block;
     max-width: 980px;
     width: 100%;
+    text-align: center;
+    margin: auto;
 }
 .merchan-box > h2 {
     padding-bottom: 30px;

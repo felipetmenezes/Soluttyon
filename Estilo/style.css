@@ -61,17 +61,16 @@ h2,h3 {
 /* PRIMEIRO MERCHAN !*/
 
 .merchan {
-    height: 70vh;
     text-align: center;
     background-image:linear-gradient(to bottom, #343434, var(--bgpreto), black) ;
+    padding: 20px 0;
 }
 .merchan-box {
     max-width: 980px;
     width: 100%;
-    margin: auto;
 }
 .merchan-box > h2 {
-    margin-bottom: 30px;
+    padding-bottom: 30px;
     padding-top: 30px;
     color: white;
     text-shadow: 2px 2px 0px var(--bgpreto);
@@ -79,7 +78,7 @@ h2,h3 {
 
 .merchan-box > p {
     color: var(--cordestaque);
-    max-width: 70%;
+    max-width: 70vw;
     text-align: justify;
     margin-left: auto;
     margin-right: auto;
@@ -91,7 +90,6 @@ h2,h3 {
 /* SOBRE NÓS */
 
 #about-us {
-    height: 90vh;
     background-image: linear-gradient(to bottom, rgb(38, 32, 0), var(--cordestaque), rgb(38, 32, 0) );
     display: flex;
     align-items: center;
@@ -101,8 +99,9 @@ h2,h3 {
 #about-box {
     display: block;
     background-color: var(--bgpreto);
-    margin: auto;
-    max-width: 50%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    max-width: 60%;
     padding-top: 20px;
     border-radius: 10px;
     text-align: center;
@@ -154,7 +153,7 @@ h2,h3 {
     border: 1px solid var(--cordestaque);
     box-shadow: 1px 1px 4px var(--cordestaque);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -177,8 +176,8 @@ h2,h3 {
 }
 
 #central {
-    border-left: 1px solid var(--cordestaque);
-    border-right: 1px solid var(--cordestaque);
+    border-top: 1px solid var(--cordestaque);
+    border-bottom: 1px solid var(--cordestaque);
 }
 
 .subtitle {
@@ -284,14 +283,25 @@ h2,h3 {
 
 /* MEDIA QUERIES */
 
-@media (max-width: 1024px) {
+@media (max-width: 600px) {
+    html {
+        font-size: 50%;
+    }
     .service-section > .container {
+        max-width: 70vw;
+    }
+
+    #about-box {
         max-width: 70vw;
     }
 }
 
-@media (max-width: 768px) {
-    html {
-        font-size: 50%;
+@media (max-width: 450px) {
+    .service-section > .container {
+        max-width: 80vw;
+    }
+
+    #about-box {
+        max-width: 80vw;
     }
 }

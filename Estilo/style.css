@@ -9,6 +9,7 @@
     font-style: var(--fontepadrao);
     scroll-behavior: smooth;
     font-size: 1.6rem;
+    list-style: none;
 }
 
 :root {
@@ -28,7 +29,6 @@ h2,h3 {
 
 #navbar {
     background-color: var(--bgpreto);
-
 }
 
 #navbar > .container {
@@ -43,20 +43,29 @@ h2,h3 {
     margin: auto;
 }
 
-#navbar > .container > nav > a {
+#navbar-list > .menu {
+    display: flex;
+}
+
+#navbar-list > .menu > li {
     margin: 0 15px;
+}
+
+#navbar-list > .menu > li > a {
     color: var(--cordestaque);
 }
 
-#navbar > .container > img {
-
-}
-
-#navbar > .container > nav > a:hover {
+#navbar-list > .menu > li > a:hover {
     background-color: rgba(211, 211, 211, 0.153);
     border-bottom: 1px solid var(--cordestaque);
     transition: .2s linear;
 }
+
+.menu-section > img {
+
+}
+
+/*FIM MENU NAVEGAÇÃO */
 
 /* PRIMEIRO MERCHAN !*/
 
@@ -89,6 +98,8 @@ h2,h3 {
     text-indent: 30px;
 
 }
+/* FIM PRIMEIRO MERCHAN */
+
 /* SOBRE NÓS */
 
 #about-us {
@@ -124,6 +135,8 @@ h2,h3 {
     text-align: justify;
     text-indent: 20px;
 }
+/* FIM SOBRE NÓS */
+
 /* MERCHAN + SERVIÇOS */
 
 .merchan-service {
@@ -191,6 +204,9 @@ h2,h3 {
     color: #151414;
     text-shadow: 0px 0px 1px var(--bgpreto);
 }
+/* FIM MERCHAN + SERVIÇOS */
+
+
 /* CLIENTES */
 
 #clientes {
@@ -244,6 +260,8 @@ h2,h3 {
     grid-row: 4/6;
     justify-self: center;
 }
+/* FIM ÁREA CLIENTES */
+
 /* FALE CONOSCO ! */
 
 #contato {
@@ -282,6 +300,7 @@ h2,h3 {
     width: 100%;
     display: block;
 }
+/* FIM FALE CONOSCO !*/
 
 /* MEDIA QUERIES */
 
@@ -295,6 +314,74 @@ h2,h3 {
 
     #about-box {
         max-width: 70vw;
+    }
+}
+
+@media (max-width: 550px) {
+    #navbar-list {
+        display: none;
+    }
+    
+    .menu-toggle {
+        width: 40px;
+        height: 30px;
+        margin-right: 20px;
+    }
+
+    .one, .two, .three {
+        background-color: var(--cordestaque);
+        height: 0.4rem;
+        width: 100%;
+        margin: 5px auto;
+        transition-duration: 0.3s;
+    }
+
+    .menu-section.on {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu-section.on > #navbar-list {
+        display: block;
+    }
+
+    .menu-section.on > .menu-toggle {
+        position: absolute;
+        right: 0;
+        top: 15px;
+    }
+
+    .menu-section.on > .menu-toggle > .one {
+        transform: rotate(45deg) translate(7px,6px);
+    }
+
+    .menu-section.on > .menu-toggle > .two {
+        opacity: 0;
+    }
+
+    .menu-section.on > .menu-toggle > .three {
+        transform: rotate(-45deg) translate(5px,-6px);
+    }
+
+    .menu-section.on > #navbar-list > .menu {
+        text-align: center;
+        display: block;
+    }
+
+    .menu-section.on > #navbar-list > .menu > li > a {
+        display: block;
+        font-size: 3.5rem;
+        margin-bottom: 8rem;
+        border-bottom: 1px solid var(--cordestaque);
+        transition-duration: 0.5s;
     }
 }
 

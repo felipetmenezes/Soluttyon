@@ -1,77 +1,54 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Yantramanav:wght@100;300;400;500;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sarala:wght@400;700&family=Yantramanav:wght@100;300;400;500;700;900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     outline: 0;
     text-decoration: none;
     box-sizing: border-box;
-    font-style: var(--fontepadrao);
     scroll-behavior: smooth;
     font-size: 1.6rem;
     list-style: none;
+    font-family: var(--fontepadrao);
 }
 
 :root {
-    --cordestaque: #af9502;
-    --cordestaque2:  rgb(52, 52, 52);
-    --fontepadrao: Arial, Helvetica;
-    --bgpreto: rgba(0, 0, 0, 0.975)
+    --cordestaque: #e6a80e;
+    --cordestaque2:  #b8860b;
+    --cordestaque3: #822c97;
+    --fontepadrao: 'Sarala', 'Ubuntu', sans-serif;
+    --bgpreto: #151515;
+    --bgpreto2: #1a1a1a;
+    --bgpreto3: #111111;
 }
 html {
     font-size: 62.5%;
 }
-h2,h3 {
-    text-transform: uppercase;
+
+.destaque {
+    color: #f5f5f5;
+    font-size: 3rem;
 }
 
-/* MENU NAVEGAÇÃO */
-
-#navbar {
-    background-color: var(--bgpreto);
+.subtitle {
+    color: var(--cordestaque2);
+    text-shadow: 0px 0px 1px var(--cordestaque);
 }
 
-#navbar > .container {
-    height: 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    width: 90%;
-    padding: 0 15px;
-    max-width: 980px;
-    margin: auto;
+.subtitle2 {
+    color: var(--cordestaque2);
+    text-shadow: 1px 1px 1px var(--bgpreto);
 }
-
-#navbar-list > .menu {
-    display: flex;
-}
-
-#navbar-list > .menu > li {
-    margin: 0 15px;
-}
-
-#navbar-list > .menu > li > a {
-    color: var(--cordestaque);
-}
-
-#navbar-list > .menu > li > a:hover {
-    background-color: rgba(211, 211, 211, 0.153);
-    border-bottom: 1px solid var(--cordestaque);
-    transition: .2s linear;
-}
-
-.menu-section > img {
-
-}
-
-/*FIM MENU NAVEGAÇÃO */
 
 /* PRIMEIRO MERCHAN !*/
 
 .merchan {
-    background-image:linear-gradient(to bottom, #343434, var(--bgpreto), black) ;
-    padding: 20px 0;
+    background-color: var(--bgpreto3);
+    padding: 10rem 0;
 }
 .merchan-box {
     display: block;
@@ -79,31 +56,29 @@ h2,h3 {
     width: 100%;
     text-align: center;
     margin: auto;
-}
-.merchan-box > h2 {
-    padding-bottom: 30px;
-    padding-top: 30px;
-    color: white;
-    text-shadow: 2px 2px 0px var(--bgpreto);
+    font-weight: bold;
 }
 
 .merchan-box > p {
     color: var(--cordestaque);
-    max-width: 50vw;
+    max-width: 70vw;
     text-align: justify;
     margin-left: auto;
     margin-right: auto;
-    font-size: 1.6rem;
-    line-height: 3rem;
-    text-indent: 30px;
+    font-size: 3rem;
+    line-height: 3.5rem;
+}
 
+.merchan-box img {
+    height: 50rem;
+    max-width: 100vw;
 }
 /* FIM PRIMEIRO MERCHAN */
 
 /* SOBRE NÓS */
 
 #about-us {
-    background-image: linear-gradient(to bottom, rgb(38, 32, 0), var(--cordestaque), rgb(38, 32, 0) );
+    background-color: var(--bgpreto);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -111,27 +86,24 @@ h2,h3 {
 
 #about-box {
     display: block;
-    background-color: var(--bgpreto);
     margin-top: 3rem;
     margin-bottom: 3rem;
-    max-width: 60%;
+    max-width: 70%;
     padding-top: 20px;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0px 0px 4px var(--cordestaque);
 }
 #about-box > h2 {
-    color: white;
+    color: var(--cordestaque3);
     padding-top: 30px;
     margin-bottom: 30px;
-    text-shadow: 2px 2px 0 var(--bgpreto);
     padding-left: 20px;
 }
 
 #about-box > p {
-    max-width: 50vw;
+    max-width: 70vw;
     padding: 0px 20px;
-    color: var(--cordestaque);
+    color: var(--cordestaque2);
     line-height: 3rem;
     text-align: justify;
     text-indent: 20px;
@@ -141,33 +113,42 @@ h2,h3 {
 /* MERCHAN + SERVIÇOS */
 
 .merchan-service {
-    background-image:linear-gradient(to top, #2a2a2a 05%, #141313 60%,  #3c3c3c 100%) ;
+    background-image :linear-gradient(to bottom, #e6a80e, #eeb647, #f6c46d, #fbd292, #ffe1b6, #fff0da, #ffffff);
     text-align: center;
 }
+
+.merchan-service > section > .merchan-box > h2 {
+    color: var(--bgpreto3);
+}
+
+.merchan-service > section > .merchan-box > p {
+    color: var(--bgpreto3);
+}
+
 .service-section {
     padding-bottom: 50px;
 }
 
 .service-section > h2 {
-    color: var(--cordestaque);
-    text-align: center;
+    color: var(--bgpreto3);
+    text-align: left;
     padding: 50px 0;
     margin-left: auto;
     margin-right: auto;
-    max-width: 60%;
+    max-width: 70%;
     text-shadow: 0px 1px 2px var(--bgpreto);
     font-size: 4.8rem;
     font-weight: bold;
 }
 
 .service-section > .container {
-    background-color: rgb(255, 255, 255);
-    max-width: 50vw;
+    background-color: var(--bgpreto3);
+    max-width: 70vw;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 10px;
-    border: 1px solid var(--cordestaque);
-    box-shadow: 1px 1px 4px var(--cordestaque);
+    border-radius: 2rem;
+    border: 1px solid var(--bgpreto3);
+    box-shadow: 1px 1px 4px var(--bgpreto2);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -192,30 +173,21 @@ h2,h3 {
     margin: auto;
     text-align: justify;
     text-indent: 3rem;
-    color: var(--bgpreto);
+    color: var(--cordestaque);
 }
 
 #central {
-    border-top: 1px solid var(--cordestaque);
-    border-bottom: 1px solid var(--cordestaque);
+    border-top: 1px solid var(--cordestaque2);
+    border-bottom: 1px solid var(--cordestaque2);
 }
 
-.subtitle {
-    color: var(--bgpreto);
-    text-shadow: 0px 0px 1px var(--cordestaque);
-}
-
-.subtitle2 {
-    color: #151414;
-    text-shadow: 0px 0px 1px var(--bgpreto);
-}
 /* FIM MERCHAN + SERVIÇOS */
 
 
 /* CLIENTES */
 
 #clientes {
-    background-image: linear-gradient(-30deg, var(--cordestaque) 5%, rgb(114, 97, 0) 25%, rgb(47, 40, 0));
+    
     max-width: 100%;
 }
 
@@ -239,8 +211,8 @@ h2,h3 {
     text-align: center;
     line-height: 3rem;
     padding-top: 15px;
-    color: white;
-    text-shadow: 2px 2px 5px black;
+    color: var(--bgpreto3);
+    box-shadow: 2px 2px 5px var(--bgpreto3);
 }
 
 #cliente01 {
@@ -322,75 +294,9 @@ h2,h3 {
     }
 }
 
-@media (max-width: 550px) {
-    #navbar-list {
-        display: none;
-    }
-    
-    .menu-toggle {
-        width: 40px;
-        height: 30px;
-        margin-right: 20px;
-    }
-
-    .one, .two, .three {
-        background-color: var(--cordestaque);
-        height: 0.4rem;
-        width: 100%;
-        margin: 5px auto;
-        transition-duration: 0.3s;
-    }
-
-    .menu-section.on {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: black;
-        z-index: 10;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .menu-section.on > #navbar-list {
-        display: block;
-    }
-
-    .menu-section.on > .menu-toggle {
-        position: absolute;
-        right: 35px;
-        top: 15px;
-    }
-
-    .menu-section.on > .menu-toggle > .one {
-        transform: rotate(45deg) translate(7px,6px);
-    }
-
-    .menu-section.on > .menu-toggle > .two {
-        opacity: 0;
-    }
-
-    .menu-section.on > .menu-toggle > .three {
-        transform: rotate(-45deg) translate(5px,-6px);
-    }
-
-    .menu-section.on > #navbar-list > .menu {
-        text-align: center;
-        display: block;
-    }
-
-    .menu-section.on > #navbar-list > .menu > li > a {
-        display: block;
-        font-size: 3.5rem;
-        margin-bottom: 8rem;
-        border-bottom: 1px solid var(--cordestaque);
-        transition-duration: 0.5s;
-    }
-}
 
 @media (max-width: 450px) {
+
     .service-section > .container {
         max-width: 80vw;
     }

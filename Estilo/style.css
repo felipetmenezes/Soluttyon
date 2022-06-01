@@ -19,7 +19,7 @@
 :root {
     --cordestaque: #e6a80e;
     --cordestaque2:  #b8860b;
-    --cordestaque3: #822c97;
+    --cordestaque3: #f5f5f5;
     --fontepadrao: 'Sarala', 'Ubuntu', sans-serif;
     --bgpreto: #151515;
     --bgpreto2: #1a1a1a;
@@ -30,8 +30,9 @@ html {
 }
 
 .destaque {
-    color: #f5f5f5;
+    color: var(--cordestaque);
     font-size: 3rem;
+    background-image: linear-gradient(to bottom, transparent 0%, transparent 32%, rgba(255, 255, 255, 0.120) 33%, rgba(255, 255, 255, 0.120) 85%, transparent 86%, transparent 100%);
 }
 
 .subtitle {
@@ -48,19 +49,20 @@ html {
 
 .merchan {
     background-color: var(--bgpreto3);
-    padding: 10rem 0;
+    padding: 2rem 0;
 }
 .merchan-box {
     display: block;
-    max-width: 980px;
+    max-width: 70vw;
     width: 100%;
     text-align: center;
     margin: auto;
     font-weight: bold;
+    padding: 6rem 0;
 }
 
 .merchan-box > p {
-    color: var(--cordestaque);
+    color: var(--cordestaque3);
     max-width: 70vw;
     text-align: justify;
     margin-left: auto;
@@ -69,10 +71,11 @@ html {
     line-height: 3.5rem;
 }
 
-.merchan-box img {
-    height: 50rem;
-    max-width: 100vw;
+.merchan-box > img {
+    height: 40rem;
+    max-width: 100%;
 }
+
 /* FIM PRIMEIRO MERCHAN */
 
 /* SOBRE NÓS */
@@ -89,24 +92,27 @@ html {
     margin-top: 3rem;
     margin-bottom: 3rem;
     max-width: 70%;
-    padding-top: 20px;
+    padding-top: 2rem 0;
     border-radius: 10px;
     text-align: center;
 }
 #about-box > h2 {
-    color: var(--cordestaque3);
-    padding-top: 30px;
-    margin-bottom: 30px;
-    padding-left: 20px;
+    color: var(--cordestaque2);
+    padding-top: 5rem 0;
+    margin: 4rem 0;
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: left;
 }
 
 #about-box > p {
     max-width: 70vw;
-    padding: 0px 20px;
-    color: var(--cordestaque2);
-    line-height: 3rem;
+    padding: 3rem 0;
+    color: var(--cordestaque3);
+    line-height: 3.5rem;
     text-align: justify;
-    text-indent: 20px;
+    font-size: 3rem;
+    font-weight: bold;
 }
 /* FIM SOBRE NÓS */
 
@@ -123,16 +129,14 @@ html {
 
 .merchan-service > section > .merchan-box > p {
     color: var(--bgpreto3);
-}
-
-.service-section {
-    padding-bottom: 50px;
+    line-height: 3.5rem;
+    text-indent: 2rem;
 }
 
 .service-section > h2 {
     color: var(--bgpreto3);
     text-align: left;
-    padding: 50px 0;
+    padding: 3rem 0;
     margin-left: auto;
     margin-right: auto;
     max-width: 70%;
@@ -162,18 +166,21 @@ html {
 }
 
 .serv-container > h2 {
-    padding-bottom: 20px;
-    font-size: 1.7rem;
+    padding-bottom: 2rem;
+    font-size: 2.4rem;
+    font-weight: bold;
 }
 
 .serv-container > p {
     line-height: 3rem;
-    padding: 10px 0px;
+    padding: 1rem 0px;
     max-width: 90%;
     margin: auto;
     text-align: justify;
-    text-indent: 3rem;
-    color: var(--cordestaque);
+    text-indent: 2rem;
+    color: var(--cordestaque3);
+    font-size: 3rem;
+    font-weight: 600;
 }
 
 #central {
@@ -199,7 +206,7 @@ html {
     align-items: center;
     max-width: 90vw;
     margin: auto;
-    grid-gap: 20px;
+    grid-gap: 2rem;
 }
 
 .container-feedback > div {
@@ -210,7 +217,7 @@ html {
     border-right: 3px solid var(--bgpreto);
     text-align: center;
     line-height: 3rem;
-    padding-top: 15px;
+    padding: 1.5rem 1rem;
     color: var(--bgpreto3);
     box-shadow: 2px 2px 5px var(--bgpreto3);
 }
@@ -303,5 +310,35 @@ html {
 
     #about-box {
         max-width: 80vw;
+    }
+
+    .container-feedback {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        margin-top: 4rem;
+    }
+
+    #cliente01 {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        margin-top: 2rem;
+    }
+
+    #cliente02 {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        margin-top: 2rem;
+    }
+
+    #cliente03 {
+        grid-column: 1/2;
+        grid-row: 3/4;
+        margin-top: 2rem;
+    }
+
+    #cliente04 {
+        grid-column: 1/2;
+        grid-row: 4/5;
+        margin-top: 2rem;
     }
 }
